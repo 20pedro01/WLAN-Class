@@ -794,29 +794,52 @@ main::-webkit-scrollbar-thumb {
     }
 }
 
-/* --- Final Polish for Short Screens (Landscape) --- */
+/* --- Global Height Optimization for Landscape --- */
 @media screen and (max-height: 600px) {
-    .cover-slide h1 { 
-        font-size: 2.2rem !important; 
+    /* Título de diapositiva más pequeño */
+    h1 {
+        font-size: 1.6rem !important;
         margin-bottom: 0.5rem !important;
     }
+
+    /* Portada ultra-compacta */
+    .cover-slide h1 { font-size: 1.8rem !important; }
+    .cover-slide img { display: none !important; }
+    .cover-slide .details { transform: scale(0.8); margin-top: -1.5rem !important; }
+
+    /* Tarjetas generales más delgadas */
+    .card { 
+        padding: 0.8rem !important; 
+        margin-bottom: 0.8rem !important;
+    }
     
-    .cover-slide .details { 
-        margin-top: -0.5rem !important; 
-        transform: scale(0.9);
+    .card h3 { font-size: 1.1rem !important; margin-bottom: 0.2rem !important; }
+    .card p { font-size: 0.85rem !important; line-height: 1.3 !important; }
+    
+    /* Imágenes de tarjetas más pequeñas */
+    .card img { 
+        max-height: 100px !important; 
+        width: auto !important;
+        margin-top: 0.3rem !important;
     }
 
-    .cover-slide img {
-        max-height: 80px !important;
+    /* Diapositiva 3 (Pasos) más compacta */
+    .step-card { 
+        padding: 0.6rem !important; 
+        min-width: 150px !important; 
     }
+    .step-number { width: 1.2rem !important; height: 1.2rem !important; font-size: 0.7rem !important; }
 
+    /* Navegación al ras y pequeña */
     .nav-controls {
-        bottom: 0.5rem !important;
-        transform: translateX(-50%) scale(0.85) !important;
+        bottom: 0.2rem !important;
+        transform: translateX(-50%) scale(0.8) !important;
     }
 
+    /* ESTO ES LO MÁS IMPORTANTE: 
+       Permite que el texto suba por encima de los botones al hacer scroll */
     main {
-        padding-bottom: 8rem !important; /* Espacio de seguridad para los botones */
+        padding-bottom: 12rem !important; 
     }
 }
 
