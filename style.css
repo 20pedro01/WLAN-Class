@@ -795,31 +795,62 @@ main::-webkit-scrollbar-thumb {
 }
 
 /* --- Global Height Optimization for Landscape (Triggered by JS) --- */
-body.mobile-landscape-opt header { height: 40px !important; padding: 0 1rem !important; }
-body.mobile-landscape-opt .logo { font-size: 0.9rem !important; }
-body.mobile-landscape-opt .slide-indicator { font-size: 0.75rem !important; }
-body.mobile-landscape-opt .progress-container { display: none !important; }
+body.mobile-landscape-opt header {
+    height: 40px !important;
+    padding: 0 1rem !important;
+}
 
-body.mobile-landscape-opt h1 { 
-    font-size: 1.4rem !important; 
+body.mobile-landscape-opt .logo {
+    font-size: 0.9rem !important;
+}
+
+body.mobile-landscape-opt .slide-indicator {
+    font-size: 0.75rem !important;
+}
+
+body.mobile-landscape-opt .progress-container {
+    display: none !important;
+}
+
+body.mobile-landscape-opt h1 {
+    font-size: 1.4rem !important;
     margin-bottom: 0.4rem !important;
     margin-top: 0.2rem !important;
 }
 
 /* Portada sin imagen y super compacta */
-body.mobile-landscape-opt .cover-slide img { display: none !important; }
-body.mobile-landscape-opt .cover-slide h1 { font-size: 1.6rem !important; }
-body.mobile-landscape-opt .cover-slide .details { transform: scale(0.75); margin-top: -2rem !important; }
+body.mobile-landscape-opt .cover-slide img {
+    display: none !important;
+}
 
-body.mobile-landscape-opt .card { 
-    padding: 0.5rem 1rem !important; 
+body.mobile-landscape-opt .cover-slide h1 {
+    font-size: 1.6rem !important;
+}
+
+body.mobile-landscape-opt .cover-slide .details {
+    transform: scale(0.75);
+    margin-top: -2rem !important;
+}
+
+body.mobile-landscape-opt .card {
+    padding: 0.5rem 1rem !important;
     margin-bottom: 0.4rem !important;
     min-height: auto !important;
 }
 
-body.mobile-landscape-opt .card h3 { font-size: 1rem !important; margin-bottom: 0.1rem !important; }
-body.mobile-landscape-opt .card p { font-size: 0.8rem !important; line-height: 1.2 !important; }
-body.mobile-landscape-opt .card img { max-height: 80px !important; }
+body.mobile-landscape-opt .card h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.1rem !important;
+}
+
+body.mobile-landscape-opt .card p {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+}
+
+body.mobile-landscape-opt .card img {
+    max-height: 80px !important;
+}
 
 /* Pasos en una fila */
 body.mobile-landscape-opt .steps-container {
@@ -829,32 +860,40 @@ body.mobile-landscape-opt .steps-container {
     gap: 0.3rem !important;
 }
 
-body.mobile-landscape-opt .step-card { padding: 0.4rem !important; flex: 1 !important; min-width: 0 !important; }
-body.mobile-landscape-opt .step-card h3 { font-size: 0.85rem !important; }
+body.mobile-landscape-opt .step-card {
+    padding: 0.4rem !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+body.mobile-landscape-opt .step-card h3 {
+    font-size: 0.85rem !important;
+}
 
 body.mobile-landscape-opt .nav-controls {
     bottom: 0.2rem !important;
     transform: translateX(-50%) scale(0.9) !important;
 }
 
-/* Stickers: clase correcta es slide-decoration */
-body.mobile-landscape-opt .slide-decoration {
+/* Stickers de alta visibilidad posicionados como "escolta" del contenido */
+body.mobile-landscape-opt .sticker {
     position: fixed !important;
-    width: 180px !important;
-    height: 180px !important;
-    opacity: 0.25 !important;
+    width: 250px !important;
+    height: 250px !important;
+    opacity: 0.3 !important;
     z-index: -1 !important;
-    bottom: auto !important; /* Cancelar el inline style */
 }
 
-body.mobile-landscape-opt .slide-decoration:nth-child(1) { 
-    top: 60px !important; 
-    left: 20px !important; 
+body.mobile-landscape-opt .sticker-top-left {
+    top: 50px !important;
+    left: 20px !important;
+    transform: rotate(-15deg);
 }
-body.mobile-landscape-opt .slide-decoration:nth-child(2) { 
-    top: 200px !important; 
-    right: 20px !important; 
-    left: auto !important;
+
+body.mobile-landscape-opt .sticker-bottom-right {
+    top: 180px !important;
+    right: 40px !important;
+    transform: rotate(20deg);
 }
 
 /* Ventanas modales con márgenes elegantes */
@@ -864,17 +903,20 @@ body.mobile-landscape-opt .modal-content {
     padding: 2rem !important;
 }
 
-body.mobile-landscape-opt .modal-content h2 { font-size: 1.8rem !important; }
-body.mobile-landscape-opt .close-modal { 
-    top: 1rem !important; 
-    right: 1rem !important; 
+body.mobile-landscape-opt .modal-content h2 {
+    font-size: 1.8rem !important;
+}
+
+body.mobile-landscape-opt .close-modal {
+    top: 1rem !important;
+    right: 1rem !important;
     font-size: 2.5rem !important;
 }
 
 body.mobile-landscape-opt main {
     margin-top: 40px !important;
     padding-top: 0.2rem !important;
-    padding-bottom: 8rem !important; 
+    padding-bottom: 8rem !important;
 }
 
 /* --- Mobile Portrait Locking (Restored) --- */
@@ -882,6 +924,7 @@ body.mobile-landscape-opt main {
     .orientation-overlay {
         display: flex;
     }
+
     #app {
         display: none;
     }
