@@ -794,8 +794,33 @@ main::-webkit-scrollbar-thumb {
     }
 }
 
+/* --- Final Polish for Short Screens (Landscape) --- */
+@media screen and (max-height: 600px) {
+    .cover-slide h1 { 
+        font-size: 2.2rem !important; 
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .cover-slide .details { 
+        margin-top: -0.5rem !important; 
+        transform: scale(0.9);
+    }
 
-/* --- Mobile Portrait Locking (Keep this) --- */
+    .cover-slide img {
+        max-height: 80px !important;
+    }
+
+    .nav-controls {
+        bottom: 0.5rem !important;
+        transform: translateX(-50%) scale(0.85) !important;
+    }
+
+    main {
+        padding-bottom: 8rem !important; /* Espacio de seguridad para los botones */
+    }
+}
+
+/* --- Mobile Portrait Locking (Restored) --- */
 @media screen and (max-width: 1024px) and (orientation: portrait) {
     .orientation-overlay {
         display: flex;
