@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M50 80a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" fill="#A78BFA"/>
+  <path d="M50 50c-10 0-18.7 4.1-25 10.7l7.1 7.1c4.5-4.7 10.9-7.8 17.9-7.8s13.4 3.1 17.9 7.8l7.1-7.1C68.7 54.1 60 50 50 50z" fill="#F472B6"/>
+  <circle cx="75" cy="40" r="15" fill="#60A5FA" />
+  <text x="75" y="47" font-family="Arial" font-weight="bold" font-size="18" fill="white" text-anchor="middle">6</text>
+</svg>

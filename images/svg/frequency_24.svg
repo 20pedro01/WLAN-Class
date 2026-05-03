@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M20 50 Q35 20 50 50 Q65 80 80 50" stroke="#60A5FA" stroke-width="6" fill="none" />
+  <rect x="25" y="70" width="50" height="18" rx="4" fill="#A78BFA" />
+  <text x="50" y="83" font-family="Arial" font-weight="bold" font-size="10" fill="white" text-anchor="middle">2.4 GHz</text>
+</svg>
