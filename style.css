@@ -794,42 +794,54 @@ main::-webkit-scrollbar-thumb {
     }
 }
 
-
-/* --- Global Height Optimization for Landscape --- */
+/* --- Global Height Optimization for Landscape (Ultra) --- */
 @media screen and (max-height: 600px) {
+    header { height: 40px !important; padding: 0 1rem !important; }
+    .logo { font-size: 0.9rem !important; }
+    .slide-indicator { font-size: 0.75rem !important; }
+    .progress-container { display: none !important; }
+
     h1 { 
-        font-size: 1.8rem !important; 
-        margin-bottom: 0.8rem !important;
+        font-size: 1.4rem !important; 
+        margin-bottom: 0.4rem !important;
+        margin-top: 0.2rem !important;
     }
 
-    /* Forzar que los pasos quepan en una fila */
+    /* Portada sin imagen y super compacta */
+    .cover-slide img { display: none !important; }
+    .cover-slide h1 { font-size: 1.6rem !important; }
+    .cover-slide .details { transform: scale(0.75); margin-top: -2rem !important; }
+
+    .card { 
+        padding: 0.5rem 1rem !important; 
+        margin-bottom: 0.4rem !important;
+        min-height: auto !important;
+    }
+
+    .card h3 { font-size: 1rem !important; margin-bottom: 0.1rem !important; }
+    .card p { font-size: 0.8rem !important; line-height: 1.2 !important; }
+    .card img { max-height: 80px !important; }
+
+    /* Pasos en una fila */
     .steps-container {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
-        gap: 0.5rem !important;
-        align-items: stretch !important;
+        gap: 0.3rem !important;
     }
 
-    .step-card {
-        flex: 1 !important;
-        min-width: 0 !important; /* Permitir que se encojan */
-        padding: 0.5rem !important;
-    }
-
-    .step-card p { font-size: 0.75rem !important; }
-
-    /* Reducción de márgenes generales */
-    .card { padding: 1rem !important; margin-bottom: 0.5rem !important; }
-    .card img { max-height: 120px !important; }
+    .step-card { padding: 0.4rem !important; flex: 1 !important; min-width: 0 !important; }
+    .step-card h3 { font-size: 0.85rem !important; }
 
     .nav-controls {
-        bottom: 0.5rem !important;
-        transform: translateX(-50%) scale(1.1) !important;
+        bottom: 0.2rem !important;
+        transform: translateX(-50%) scale(0.9) !important;
     }
 
     main {
-        padding-bottom: 10rem !important; 
+        margin-top: 40px !important;
+        padding-top: 0.2rem !important;
+        padding-bottom: 8rem !important; 
     }
 }
 
