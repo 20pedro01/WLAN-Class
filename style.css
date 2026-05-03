@@ -795,66 +795,52 @@ main::-webkit-scrollbar-thumb {
 }
 
 
-/* --- Dynamic Desktop Simulation for Mobile Landscape --- */
+/* --- Desktop Experience for Mobile Landscape --- */
 @media screen and (max-height: 600px) and (orientation: landscape) {
     #app {
-        width: 200% !important; /* Logical width is 2x screen */
-        height: 200% !important; /* Logical height is 2x screen */
-        zoom: 0.5; /* Scale back to 100% physical width */
-        position: absolute;
-        top: 0;
-        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        zoom: 0.65; /* Zoom ideal para lectura y espacio */
         display: flex;
         flex-direction: column;
         background: var(--bg-color);
-        overflow: hidden;
     }
 
     body {
         background: var(--bg-color);
-        overflow: hidden;
+        display: block !important; /* Quitar el flex de centrado del body */
     }
 
     header { 
-        width: 100% !important;
-        height: 80px !important; 
-        padding: 0 5% !important; 
-        position: relative !important;
-        background: var(--glass-bg) !important;
-        backdrop-filter: blur(20px) !important;
+        height: 60px !important; 
+        padding: 0 2rem !important; 
     }
 
-    .logo { font-size: 1.5rem !important; }
-
     main { 
-        flex: 1 !important;
-        width: 100% !important;
-        margin-top: 0 !important; 
-        padding: 3rem 8% 12rem 8% !important;
-        overflow-y: auto !important;
+        max-width: none !important; /* Importante para que llene el ancho */
+        padding: 1.5rem 5% 8rem 5% !important;
     }
 
     h1 { 
-        font-size: 3.5rem !important; 
-        margin-bottom: 2.5rem !important;
+        font-size: 2.2rem !important; 
+        margin-bottom: 1.5rem !important;
     }
 
-    /* Stickers perfectos en las esquinas */
+    .card { 
+        min-height: auto !important;
+    }
+
     .sticker {
-        width: 180px !important;
-        height: 180px !important;
+        width: 120px !important;
+        height: 120px !important;
         opacity: 0.1 !important;
         position: fixed !important;
-        z-index: -1 !important;
     }
 
     .nav-controls { 
         position: fixed !important;
-        bottom: 3rem !important;
-        left: 50% !important;
-        transform: translateX(-50%) scale(1.6) !important;
-        z-index: 2000;
-        background: rgba(255, 255, 255, 0.9) !important;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+        bottom: 1.5rem !important;
+        transform: translateX(-50%) scale(1.3) !important;
+        background: rgba(255, 255, 255, 0.95) !important;
     }
 }
