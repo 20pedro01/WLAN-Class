@@ -696,27 +696,40 @@ function updateControls() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+    init();
+    adjustViewport(); // Ejecutar después de que el DOM esté listo
+});
 
 /**
  * Optimizador de Visibilidad Móvil (Modo Computadora Automático)
- * Fuerza un ancho de 1200px en horizontal para dispositivos móviles.
+ * Usa dimensiones físicas (screen.*) para detección confiable.
  */
+function isMobileLandscape() {
+    // Usa screen.width/height que son las dimensiones físicas reales del dispositivo
+    // y no se ven afectadas por el meta viewport
+    const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+    const isLandscape = screen.width > screen.height;
+    const isSmallScreen = Math.min(screen.width, screen.height) < 600;
+    return isTouchDevice && isLandscape && isSmallScreen;
+}
+
 function adjustViewport() {
     const viewport = document.querySelector('meta[name="viewport"]');
-    if (window.innerHeight < 600 && window.innerWidth > window.innerHeight) {
-        // Modo Horizontal en Móvil: Forzamos vista de escritorio ultra-amplia
+    if (isMobileLandscape()) {
+        // Modo Horizontal en Móvil: Forzamos vista de escritorio
         viewport.setAttribute('content', 'width=1600');
         document.body.classList.add('mobile-landscape-opt');
     } else {
-        // Modo Normal: Regresamos a la escala estándar
+        // Modo Normal: escala estándar
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
         document.body.classList.remove('mobile-landscape-opt');
     }
 }
 
-// Escuchar cambios de tamaño y orientación
+// Escuchar cambios de orientación
 window.addEventListener('resize', adjustViewport);
-window.addEventListener('orientationchange', adjustViewport);
-// Ejecución inicial
-adjustViewport();
+window.addEventListener('orientationchange', () => {
+    // Pequeño delay para que el navegador actualice screen.width/height
+    setTimeout(adjustViewport, 100);
+});
