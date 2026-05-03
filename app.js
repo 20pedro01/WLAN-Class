@@ -143,7 +143,8 @@ const slidesData = [
                 title: "Roaming fluido",
                 text: "Te mueves por el edificio y tu dispositivo salta de un nodo a otro sin desconectarse.",
                 details: "El sistema decide automáticamente a qué nodo conectarte basándose en la potencia de la señal.",
-                image: "images/NetworkSummary.png"
+                image: "images/RedMalla.png",
+                fullWidth: true
             }
         ]
     },
@@ -283,7 +284,7 @@ const slidesData = [
                 title: "SNMP (Monitoreo)",
                 text: "Protocolo para enviar mensajes de gestión (traps) a un servidor central.",
                 details: "Permite alertar sobre fallas de APs o saturación de canales en tiempo real.",
-                image: "images/TopologiaSNMP.png"
+                image: "images/SNMPComunity.png"
             },
             {
                 type: "card",
@@ -696,3 +697,25 @@ function updateControls() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+/**
+ * Optimizador de Visibilidad Móvil (Modo Computadora Automático)
+ * Fuerza un ancho de 1200px en horizontal para dispositivos móviles.
+ */
+function adjustViewport() {
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (window.innerHeight < 600 && window.innerWidth > window.innerHeight) {
+        // Modo Horizontal en Móvil: Forzamos vista de escritorio
+        viewport.setAttribute('content', 'width=1200');
+    } else {
+        // Modo Normal: Regresamos a la escala estándar
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+    }
+}
+
+// Escuchar cambios de tamaño y orientación
+window.addEventListener('resize', adjustViewport);
+window.addEventListener('orientationchange', adjustViewport);
+// Ejecución inicial
+adjustViewport();
+
