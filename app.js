@@ -706,12 +706,11 @@ document.addEventListener('DOMContentLoaded', () => {
  * Usa dimensiones físicas (screen.*) para detección confiable.
  */
 function isMobileLandscape() {
-    // Usa screen.width/height que son las dimensiones físicas reales del dispositivo
-    // y no se ven afectadas por el meta viewport
-    const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+    // Detección basada solo en dimensiones de pantalla física
+    // No usamos isTouchDevice para evitar fallos en algunos navegadores Android
     const isLandscape = screen.width > screen.height;
-    const isSmallScreen = Math.min(screen.width, screen.height) < 600;
-    return isTouchDevice && isLandscape && isSmallScreen;
+    const isSmallScreen = Math.min(screen.width, screen.height) < 500;
+    return isLandscape && isSmallScreen;
 }
 
 function adjustViewport() {
