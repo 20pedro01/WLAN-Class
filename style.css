@@ -847,6 +847,17 @@ main::-webkit-scrollbar-thumb {
         z-index: -1 !important;
     }
 
+    .sticker-top-left { 
+        top: 20px !important; 
+        left: 20px !important; 
+        transform: rotate(-15deg);
+    }
+    .sticker-bottom-right { 
+        bottom: 40px !important; 
+        right: 40px !important; 
+        transform: rotate(15deg);
+    }
+    
     .sticker-top-left { top: 10px !important; left: 10px !important; }
     .sticker-bottom-right { bottom: 20px !important; right: 10px !important; }
 
