@@ -875,24 +875,15 @@ body.mobile-landscape-opt .nav-controls {
     transform: translateX(-50%) scale(0.9) !important;
 }
 
-
-/* Stickers: mantenerlos en su posición natural (igual que escritorio) */
+/* Stickers: fijarlos al fondo visible de la pantalla (como en escritorio) */
 body.mobile-landscape-opt .slide-decoration {
-    width: 100px !important;   /* Más pequeños para no invadir en pantalla reducida */
-    opacity: 0.8 !important;
-    z-index: 0 !important;     /* Encima del fondo pero debajo de las tarjetas */
-}
-
-body.mobile-landscape-opt .sticker-top-left {
-    top: 50px !important;
-    left: 20px !important;
-    transform: rotate(-15deg);
-}
-
-body.mobile-landscape-opt .sticker-bottom-right {
-    top: 180px !important;
-    right: 40px !important;
-    transform: rotate(20deg);
+    position: fixed !important; /* Fija a la pantalla física, ignora el scroll */
+    bottom: 8px !important;     /* Siempre visible al fondo */
+    top: auto !important;
+    width: 90px !important;
+    height: 90px !important;
+    opacity: 0.85 !important;
+    z-index: 1 !important;
 }
 
 /* Ventanas modales con márgenes elegantes */
