@@ -778,3 +778,74 @@ main::-webkit-scrollbar-thumb {
         display: none;
     }
 }
+
+/* --- Mobile Landscape Optimizations (Screen height < 500px) --- */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 0.4rem 1.5rem !important;
+        height: auto !important;
+    }
+    
+    .logo { 
+        font-size: 1rem !important; 
+    }
+    
+    #expandAllBtn { 
+        display: none !important; /* Save space */
+    }
+    
+    .progress-container {
+        width: 120px !important;
+        margin: 0 1rem !important;
+    }
+    
+    .slide-indicator {
+        font-size: 0.8rem !important;
+    }
+    
+    #slideInput {
+        width: 35px !important;
+        padding: 0.2rem !important;
+    }
+
+    main {
+        margin-top: 50px !important;
+        padding: 0.5rem 1rem 4rem 1rem !important; /* Leave room for nav */
+    }
+
+    h1 { 
+        font-size: 1.4rem !important; 
+        margin-bottom: 0.5rem !important; 
+    }
+
+    .card {
+        padding: 1rem !important;
+        min-height: auto !important;
+    }
+
+    .card h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .card p {
+        font-size: 0.9rem !important;
+    }
+
+    .card img {
+        max-height: 120px !important;
+        margin-top: 0.5rem !important;
+    }
+
+    /* Compact Navigation */
+    .nav-controls {
+        bottom: 0.4rem !important;
+        padding: 0.3rem !important;
+        gap: 0.4rem !important;
+    }
+
+    .nav-btn {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.8rem !important;
+    }
+}
