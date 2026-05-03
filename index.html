@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de redes inalámbricas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">WLAN CLASS</div>
+            <button class="nav-btn" id="expandAllBtn">↔ Expandir Todo</button>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="slide-indicator" id="slideIndicatorContainer">
+                <input type="number" id="slideInput" min="1" step="1">
+                <span id="slideTotal">/ 21</span>
+            </div>
+        </header>
+
+        <main id="slideContainer">
+            <!-- Slides will be injected here by app.js -->
+        </main>
+
+        <div class="nav-controls">
+            <button id="prevBtn" class="nav-btn" disabled>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+                Anterior
+            </button>
+            <button id="nextBtn" class="nav-btn primary">
+                Siguiente
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal for Detailed View -->
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div id="modalBody"></div>
+            <button class="modal-maximize" id="maximizeBtn" onclick="toggleMaximize()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
