@@ -218,12 +218,13 @@ main::-webkit-scrollbar-thumb {
     max-width: 1200px;
 }
 
-.content-grid.layout-1-2 > .card:first-child {
+.content-grid.layout-1-2>.card:first-child {
     grid-column: span 2;
 }
 
-.content-grid.layout-1-2 > .card {
-    max-width: 100%; /* Permitir que el grid controle el ancho */
+.content-grid.layout-1-2>.card {
+    max-width: 100%;
+    /* Permitir que el grid controle el ancho */
 }
 
 .card {
@@ -723,6 +724,7 @@ main::-webkit-scrollbar-thumb {
     transform: rotate(180deg);
     /* Visual cue for minimize */
 }
+
 /* Orientation Warning Overlay */
 .orientation-overlay {
     position: fixed;
@@ -765,15 +767,28 @@ main::-webkit-scrollbar-thumb {
 }
 
 @keyframes rotatePhone {
-    0%, 10% { transform: rotate(0deg); }
-    40%, 60% { transform: rotate(90deg); }
-    90%, 100% { transform: rotate(0deg); }
+
+    0%,
+    10% {
+        transform: rotate(0deg);
+    }
+
+    40%,
+    60% {
+        transform: rotate(90deg);
+    }
+
+    90%,
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
     .orientation-overlay {
         display: flex;
     }
+
     #app {
         display: none;
     }
@@ -782,8 +797,8 @@ main::-webkit-scrollbar-thumb {
 /* --- Aggressive Mobile Landscape Optimizations (Global Zoom) --- */
 @media screen and (max-height: 600px) and (orientation: landscape) {
     #app {
-        zoom: 0.50; /* Zoom reductor global */
-        -moz-transform: scale(0.50); /* Soporte para Firefox */
+        zoom: 0.50;
+        -moz-transform: scale(0.50);
         -moz-transform-origin: top center;
     }
 
@@ -792,56 +807,60 @@ main::-webkit-scrollbar-thumb {
     }
 
     header { 
-        height: 30px !important; 
-        padding: 0 1rem !important; 
-        background: rgba(255, 255, 255, 0.9) !important;
-    }
-    
-    .logo { 
-        font-size: 0.85rem !important; 
-    }
-    
-    .progress-container, #expandAllBtn { 
-        display: none !important; 
-    }
-    
-    .slide-indicator { 
-        font-size: 0.7rem !important; 
+        height: 35px !important; 
+        padding: 0 1.5rem !important; 
     }
 
     main { 
-        margin-top: 30px !important; 
-        padding: 0.2rem 0.5rem 3rem 0.5rem !important; 
+        margin-top: 35px !important; 
+        padding: 0.5rem 1rem 5rem 1rem !important; 
     }
 
     h1 { 
-        font-size: 1rem !important; 
-        margin: 0.1rem 0 0.4rem 0 !important;
-        line-height: 1 !important;
-        color: var(--primary-color) !important;
+        font-size: 1.4rem !important; 
+        margin-bottom: 0.8rem !important;
     }
 
-    .card { 
-        padding: 0.6rem !important; 
-        margin-bottom: 0.4rem !important;
+    /* --- STICKERS FIX FOR MOBILE --- */
+    .sticker {
+        width: 100px !important; /* Fixed size for mobile */
+        height: 100px !important;
+        opacity: 0.15 !important; /* More visible */
+        position: absolute !important; /* Move with content */
+    }
+
+    /* --- SLIDE 3 (STEPS) COMPACT --- */
+    .steps-container {
+        gap: 0.8rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .step-card {
+        flex: 1 1 20% !important; /* Allow 4 in a row */
+        min-width: 180px !important;
+        padding: 0.8rem !important;
         min-height: auto !important;
     }
 
-    .card h3 { 
-        font-size: 0.9rem !important; 
-        margin-bottom: 0.2rem !important; 
+    .step-number {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        font-size: 0.8rem !important;
+        margin-bottom: 0.5rem !important;
     }
 
-    .card p { 
-        font-size: 0.8rem !important; 
+    .step-card p {
+        font-size: 0.8rem !important;
     }
 
-    .card img { 
-        max-height: 80px !important; 
+    .card { 
+        padding: 1.2rem !important; 
+        min-height: auto !important;
     }
 
     .nav-controls { 
-        bottom: 0.2rem !important; 
-        transform: translateX(-50%) scale(0.8);
+        bottom: 0.5rem !important; 
+        transform: translateX(-50%) scale(1.1); /* Slightly larger for touch */
+        background: rgba(255, 255, 255, 0.95) !important;
     }
 }
