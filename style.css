@@ -837,29 +837,26 @@ main::-webkit-scrollbar-thumb {
         bottom: 0.2rem !important;
         transform: translateX(-50%) scale(0.9) !important;
     }
-
-    /* Rescatar Stickers para el ancho de 1600px */
+    
+    /* Regresar Stickers a FIXED para que siempre se vean en las esquinas del teléfono */
     .sticker {
-        position: absolute !important;
-        width: 180px !important;
-        height: 180px !important;
-        opacity: 0.15 !important;
+        position: fixed !important;
+        width: 150px !important;
+        height: 150px !important;
+        opacity: 0.12 !important;
         z-index: -1 !important;
     }
 
     .sticker-top-left { 
-        top: 20px !important; 
+        top: 60px !important; /* Debajo del cabezal */
         left: 20px !important; 
         transform: rotate(-15deg);
     }
     .sticker-bottom-right { 
-        bottom: 40px !important; 
-        right: 40px !important; 
+        bottom: 20px !important; 
+        right: 20px !important; 
         transform: rotate(15deg);
     }
-    
-    .sticker-top-left { top: 10px !important; left: 10px !important; }
-    .sticker-bottom-right { bottom: 20px !important; right: 10px !important; }
 
     /* Ventanas modales con márgenes elegantes */
     .modal-content {
