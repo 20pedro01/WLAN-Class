@@ -782,7 +782,7 @@ main::-webkit-scrollbar-thumb {
 /* --- Aggressive Mobile Landscape Optimizations (Global Zoom) --- */
 @media screen and (max-height: 600px) and (orientation: landscape) {
     #app {
-        zoom: 0.75; /* Zoom reductor global */
+        zoom: 0.60; /* Zoom reductor global */
         -moz-transform: scale(0.75); /* Soporte para Firefox */
         -moz-transform-origin: top center;
     }
