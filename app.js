@@ -705,8 +705,8 @@ document.addEventListener('DOMContentLoaded', init);
 function adjustViewport() {
     const viewport = document.querySelector('meta[name="viewport"]');
     if (window.innerHeight < 600 && window.innerWidth > window.innerHeight) {
-        // Modo Horizontal en Móvil: Forzamos vista de escritorio
-        viewport.setAttribute('content', 'width=1200');
+        // Modo Horizontal en Móvil: Forzamos vista de escritorio amplia
+        viewport.setAttribute('content', 'width=1400');
     } else {
         // Modo Normal: Regresamos a la escala estándar
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
@@ -718,4 +718,3 @@ window.addEventListener('resize', adjustViewport);
 window.addEventListener('orientationchange', adjustViewport);
 // Ejecución inicial
 adjustViewport();
-
