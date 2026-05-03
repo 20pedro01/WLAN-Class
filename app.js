@@ -707,9 +707,11 @@ function adjustViewport() {
     if (window.innerHeight < 600 && window.innerWidth > window.innerHeight) {
         // Modo Horizontal en Móvil: Forzamos vista de escritorio ultra-amplia
         viewport.setAttribute('content', 'width=1600');
+        document.body.classList.add('mobile-landscape-opt');
     } else {
         // Modo Normal: Regresamos a la escala estándar
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+        document.body.classList.remove('mobile-landscape-opt');
     }
 }
 
