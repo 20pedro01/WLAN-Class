@@ -838,23 +838,23 @@ main::-webkit-scrollbar-thumb {
         transform: translateX(-50%) scale(0.9) !important;
     }
 
-    /* Stickers de alta visibilidad y posicionados detrás del contenido */
+    /* Stickers usando VH para que se posicionen relativo a la altura real del teléfono */
     .sticker {
         position: fixed !important;
-        width: 220px !important;
-        height: 220px !important;
-        opacity: 0.4 !important; /* Ahora sí se verán */
+        width: 180px !important;
+        height: 180px !important;
+        opacity: 0.35 !important;
         z-index: -1 !important;
     }
 
     .sticker-top-left { 
-        top: 120px !important; 
-        left: 40px !important; 
+        top: 20vh !important; 
+        left: 50px !important; 
         transform: rotate(-10deg);
     }
     .sticker-bottom-right { 
-        top: 220px !important; 
-        right: 40px !important; 
+        top: 50vh !important; 
+        right: 50px !important; 
         transform: rotate(15deg);
     }
 
