@@ -1,4 +1,4 @@
-# Guía de Exposición Ultra-Detallada: Ingeniería de Redes Inalámbricas
+# Guía de exposición ultra-detallada
 
 Esta guía es el recurso definitivo para impartir la clase. Combina narrativa pedagógica, especificaciones técnicas de bajo nivel y dinámicas de interacción.
 
