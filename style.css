@@ -838,24 +838,24 @@ main::-webkit-scrollbar-thumb {
         transform: translateX(-50%) scale(0.9) !important;
     }
 
-    /* Stickers usando VH para que se posicionen relativo a la altura real del teléfono */
+    /* Stickers de alta visibilidad posicionados como "escolta" del contenido */
     .sticker {
         position: fixed !important;
-        width: 180px !important;
-        height: 180px !important;
-        opacity: 0.35 !important;
+        width: 250px !important;
+        height: 250px !important;
+        opacity: 0.3 !important;
         z-index: -1 !important;
     }
 
     .sticker-top-left { 
-        top: 20vh !important; 
-        left: 50px !important; 
-        transform: rotate(-10deg);
+        top: 50px !important; 
+        left: 20px !important; 
+        transform: rotate(-15deg);
     }
     .sticker-bottom-right { 
-        top: 50vh !important; 
-        right: 50px !important; 
-        transform: rotate(15deg);
+        top: 180px !important; /* Posicionado para estar detrás de las tarjetas superiores */
+        right: 40px !important; 
+        transform: rotate(20deg);
     }
 
     /* Ventanas modales con márgenes elegantes */
