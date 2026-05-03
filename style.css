@@ -837,24 +837,24 @@ body.mobile-landscape-opt .nav-controls {
     transform: translateX(-50%) scale(0.9) !important;
 }
 
-/* Stickers de alta visibilidad posicionados como "escolta" del contenido */
-body.mobile-landscape-opt .sticker {
+/* Stickers: clase correcta es slide-decoration */
+body.mobile-landscape-opt .slide-decoration {
     position: fixed !important;
-    width: 250px !important;
-    height: 250px !important;
-    opacity: 0.3 !important;
+    width: 180px !important;
+    height: 180px !important;
+    opacity: 0.25 !important;
     z-index: -1 !important;
+    bottom: auto !important; /* Cancelar el inline style */
 }
 
-body.mobile-landscape-opt .sticker-top-left { 
-    top: 50px !important; 
+body.mobile-landscape-opt .slide-decoration:nth-child(1) { 
+    top: 60px !important; 
     left: 20px !important; 
-    transform: rotate(-15deg);
 }
-body.mobile-landscape-opt .sticker-bottom-right { 
-    top: 180px !important; 
-    right: 40px !important; 
-    transform: rotate(20deg);
+body.mobile-landscape-opt .slide-decoration:nth-child(2) { 
+    top: 200px !important; 
+    right: 20px !important; 
+    left: auto !important;
 }
 
 /* Ventanas modales con márgenes elegantes */
